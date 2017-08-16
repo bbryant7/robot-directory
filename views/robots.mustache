@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Robot Directory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles.css" rel="stylesheet">
+
+  <!-- fonts go here -->
+</head>
+
+<body>
+  <div id="wrapper">
+    <h1> Robots </h1>
+
+{{#users}}
+{{#job}}
+<div>
+  <img src={{avatar}}>
+  <h3>{{name}}</h3>
+  <p>{{job}}
+  {{company}}</p>
+</div>
+
+{{/job}}
+{{^job}}
+<div>
+  <img src={{avatar}}>
+  <h3>{{name}}</h3>
+  <p>Available for hire.</p>
+</div>
+{{/job}}
+{{/users}}
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>
